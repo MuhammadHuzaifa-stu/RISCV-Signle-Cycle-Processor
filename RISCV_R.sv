@@ -40,7 +40,7 @@ module RISCV_R(input logic clk, reset);
 	branchcond br1 (.rs1(rdata1),.rs2(rdata2),.opcode(inst),.br_type(br_type),.br_taken(br_taken));
 	
 	// LSU
-	LSU L1 (.addr(result),.inst(inst),.mask(mask));
+	LSU L1 (.inst(inst),.mask(mask));
 
 	//data memory
 	data_memory dm1 (.addr(result),.write_data(rdata2),.mask(mask),.clk(clk),.reset(reset),
