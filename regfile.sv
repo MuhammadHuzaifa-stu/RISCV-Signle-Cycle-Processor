@@ -13,7 +13,7 @@ module regfile(input logic [4:0] raddr1,raddr2,waddr,
 		
 	always @(negedge Clk)
 	begin
-		if (RegWrite) 	Reg[waddr] <= wdata;
+		if (RegWrite & waddr != 5'd0) 	Reg[waddr] <= wdata;
 	end
 	assign rdata1 = Reg[raddr1];
 	assign rdata2 = Reg[raddr2];
