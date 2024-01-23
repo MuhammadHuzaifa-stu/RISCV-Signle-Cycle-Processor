@@ -7,9 +7,9 @@ int main(void){
             sum += n1;
             j++;
         }
-        j = 0;
-        n2 = n2 -1;
-        n1 = sum;
+        j   = 0;
+        n2  = n2 -1;
+        n1  = sum;
         sum = 0;
     }
 	while(1){}

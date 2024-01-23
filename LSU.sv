@@ -1,6 +1,10 @@
-module LSU (input logic [31:0] inst,output logic [3:0]mask);
+module LSU (
+	input  logic [31:0] inst,
+	output logic [3:0]  mask
+);
 	
 	logic [3:0] func3;
+
 	assign func3 = inst[14:12];
 	
 	always_comb
@@ -13,4 +17,5 @@ module LSU (input logic [31:0] inst,output logic [3:0]mask);
 			3'b101: mask = 4'b0100;		//Load Half world unsigned
 		endcase
 	end
-endmodule
+
+endmodule: LSU
